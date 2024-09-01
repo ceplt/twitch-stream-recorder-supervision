@@ -1,0 +1,9 @@
+{
+    "logFilePath": "/log/supervision-back.log",
+    "logLevel": "info",
+
+    "recordedChannelsCommand": "systemctl show 'twitch-record-*' --type=service --state=running --property=Id --value --no-pager | sed s/twitch-record-//g | sed s/.service//g",
+    "recordingChannelsDetailCommand": "ps axo cmd | grep '/bin/sh -c streamlink' | grep -v 'grep'",
+
+    "streamRecorderOutputPath": "/path/prod"
+}
